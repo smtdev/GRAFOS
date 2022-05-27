@@ -40,13 +40,22 @@ public class DFS_TestConexion {
 //                                      {  1, -1, -1, -1, -1,  1, -1, -1,  0, -1},//I
 //                                      {  1, -1, -1, -1,  1, -1, -1, -1, -1, 0 },//J
 //    };
-        public static char[] cabecera=   { 'A','B','C','D','E'};
-        public static int [][] matriz = { {  0,  1,  1, -1,  1},//A
-                                          {  1,  0,  1,  1, -1},//B
-                                          {  1,  1,  0,  1,  1},//C
-                                          { -1,  1,  1, -1, -1},//D
-                                          {  1,  -1, 1, -1,  0}//E
-        };
+//        public static char[] cabecera=   { 'A','B','C','D','E'};
+//        public static int [][] matriz = { {  0,  1,  1, -1,  1},//A
+//                                          {  1,  0,  1,  1, -1},//B
+//                                          {  1,  1,  0,  1,  1},//C
+//                                          { -1,  1,  1, -1, -1},//D
+//                                          {  1,  -1, 1, -1,  0}//E
+//        };
+        
+        public static char[] cabecera={  'A', 'B', 'C', 'D', 'E', 'F'};
+        public static int[][] matriz = {{  0,   1,   0,   0,   0,  1 },//A
+                                        {  1,   0,   1,   1,   0,  1 },//B
+                                        {  0,   1,   0,   1,   0,  0 },//C
+                                        {  0,   1,   1,   0,   1,  1 },//D
+                                        {  0,   0,   0,   1,   0,  1 },//E
+                                        {  1,   1,   0,   1,   1,  0 },//F
+                                        };
         public static List <Integer> queue = new ArrayList<>();
         public static List <Character> result = new ArrayList<>();
         public static void main(String[] args) {
@@ -135,7 +144,7 @@ public class DFS_TestConexion {
     
     public  static boolean FindNextNode(int nodoInicial){
        
-      
+      // https://pier.guillen.com.mx/algorithms/10-graficas/10.7-camino_euleriano.htm
         
         boolean found;
         for (int i = 0; i < matriz.length; i++) {

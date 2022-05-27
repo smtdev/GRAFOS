@@ -13,15 +13,63 @@ public class Kruskal {
       
     /* *************************** INDICAR LA MATRIZ, CABECERA SOLO PUEDE SER CHAR (1 CARACTER) *************************** */
   
+//    public static char[] cabecera=   {  '1', '2', '3', '4', '5', '6', '7'};
+//    public static int [][] matriz = { {  0,   2,   4,   1,  -1,  -1,  -1},//1
+//                                      {  2,   0,  -1,   3,  10,  -1,  -1},//2
+//                                      {  4,  -1,   0,   2,  -1,   5,  -1},//3
+//                                      {  1,   3,   2,   0,   2,   8,   4},//4
+//                                      { -1,  10,  -1,   2,   0,  -1,   6},//5
+//                                      { -1,  -1,   5,   8,  -1,   0,   1},//6
+//                                      { -1,  -1,  -1,   4,   6,   1,   0},//7
+//                                      };
+//    public static char[] cabecera=   {  'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'}; // Poner si son letras, siempre en minúsculas
+//    public static int [][] matriz = { {   0,   3,  -1,   4,   4,  -1,  -1,  -1,  -1,  -1},//a
+//                                      {   3,   0,  10,  -1,   2,   3,  -1,  -1,  -1,  -1},//b
+//                                      {  -1,  10,   0,  -1,  -1,   6,   1,  -1,  -1,  -1},//c
+//                                      {   4,  -1,  -1,   0,   5,  -1,  -1,   6,  -1,  -1},//d
+//                                      {   4,   2,  -1,   5,   0,  11,  -1,   2,   1,  -1},//e
+//                                      {  -1,   3,   6,  -1,  11,   0,   2,  -1,   3,  11},//f
+//                                      {  -1,  -1,   1,  -1,  -1,   2,   0,  -1,  -1,   8},//g
+//                                      {  -1,  -1,  -1,   6,   2,  -1,  -1,   0,   4,  -1},//h
+//                                      {  -1,  -1,  -1,  -1,   1,   3,  -1,   4,   0,   7},//i
+//                                      {  -1,  -1,  -1,  -1,  -1,  11,   8,  -1,   7,  0},//j
+//                                      };
+//    
+//    public static char[] cabecera=    { 'a', 'b', 'c', 'd', 'e', 'f'}; // Poner si son letras, siempre en minúsculas
+//    public static int [][] matriz = { {   0,   5,   6,   4,   3,   7},//a
+//                                      {   5,   0,   2,   4,   8,   5},//b
+//                                      {   6,   2,   0,   4,   8,   8},//c
+//                                      {   4,   4,   4,   0,   2,   5},//d
+//                                      {   3,   8,   8,   2,   0,   4},//e
+//                                      {   7,   5,   8,   5,   4,  0}};//f
+//     public static char[] cabecera={  'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'}; // Poner si son letras, siempre en minúsculas
+//    public static int[][] matriz = {{  0,   2,   2,   3,   2,   3,   3,   3},//a
+//                                    {  2,   0,   2,   3,   2,   3,   1,   3},//b
+//                                    {  2,   2,   0,   3,   2,   1,   3,   3},//c
+//                                    {  3,   3,   3,   0,   1,   2,   2,   4},//d
+//                                    {  2,   2,   2,   1,   0,   3,   3,   3},//e
+//                                    {  3,   3,   1,   2,   3,   0,   2,   4},//f
+//                                    {  3,   1,   3,   2,   3,   2,   0,   4},//g
+//                                    {  3,   3,   3,   4,   3,   4,   4,   0},//h
+//                                    
+//                                    };
+    
+//    public static char[] cabecera ={  'a', 'b', 'c', 'd', 'e'}; // Poner si son letras, siempre en minúsculas
+//    public static int[][] matriz = {{  0,   57,  64,   8,  26},//a
+//                                    { 57,    0,  88,  54,  34},//b
+//                                    { 64,   88,   0,  57,  56},//c
+//                                    {  8,   54,  57,   0,  23},//d
+//                                    { 26,   34,  56,  23,  0},//e
+//                                    };
     public static char[] cabecera=   {  '1', '2', '3', '4', '5', '6', '7'};
-    public static int [][] matriz = { {  0,   2,   4,   1,  -1,  -1,  -1},//1
-                                      {  2,   0,  -1,   3,  10,  -1,  -1},//2
-                                      {  4,  -1,   0,   2,  -1,   5,  -1},//3
-                                      {  1,   3,   2,   0,   2,   8,   4},//4
-                                      { -1,  10,  -1,   2,   0,  -1,   6},//5
-                                      { -1,  -1,   5,   8,  -1,   0,   1},//6
-                                      { -1,  -1,  -1,   4,   6,   1,   0},//7
-                                      };
+    public static int [][] matriz = { {  0,    9,   1,   2,  -1,  -1, -1},//1
+                                      {  9,    0,  -1,   8,  10,  -1, -1},//2
+                                      {  1,   -1,   0,   4,  -1,   3, -1},//3
+                                      {  2,    8,   4,   0,  11,   5,  7},//4
+                                      { -1,   10,  -1,  11,   0,  -1, 12},//5
+                                      { -1,   -1,   3,   5,  -1,   0,  6},//6
+                                      { -1,   -1,  -1,   7,  12,  6,  0},//7
+                                        };
     
     public static void main(String[] args) {
       
@@ -130,19 +178,23 @@ public class Kruskal {
             }    
         }
         System.out.println("╚═════════╧═════════╝");
-         
+        
         System.out.println("╔═══════════════════╗");
         System.out.println("║     RESULTADO     ║");        
         System.out.println("╠═════════╤═════════╣");
         System.out.println("║ Aristas │ Pesos   ║");
         System.out.println("╠═════════╪═════════╣");
-        
+        int pesoTotal=0;
         for (KruskalClass list:mst){
             if (list.getNodo()!=""){
                 System.out.println("║ "+(list+"              ").substring(0, 18)+"║");
+                pesoTotal=pesoTotal+list.getPeso();
             }    
         }
+        System.out.println("╠═════════╪═════════╣");
+        System.out.println("║ Total   │ "+(String.valueOf(pesoTotal)+"           ").substring(0, 7)+" ║");
         System.out.println("╚═════════╧═════════╝");
+        System.out.println("pesoTotal");
     }
     
     static class SortByPeso implements Comparator<KruskalClass> {
